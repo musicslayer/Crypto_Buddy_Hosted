@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en-US">
+    <title>Finish Authorization</title>
+    <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+    
+    <body>
+		<img src="icon.png" height="40px" width="40px"> 
+    	<button id="AuthButton" style="font-size:60px;display:inline" onclick="myFunction()">Click to Finish Authorization</button>
+		<text id="AuthText" style="font-size:60px;display:none">Authorization Complete!<br>You may close this window.</text>
+    </body>
+
+    <script>
+        function myFunction() {
+			window.open("com.musicslayer.cryptobuddy://oauth" + window.location.search, "_self")
+			document.getElementById("AuthButton").style.display="none"
+			document.getElementById("AuthText").style.display="inline"
+        }
+    </script>
+</html>
